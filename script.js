@@ -1,16 +1,13 @@
 // console.log("am i connected?")
 
-// Today's Date & Time
-// var currentDate = moment().format('MMMM DD YYYY');
-// $("#currentDay").html(todayDate);
-
+// Time and date for header
 var update = function () {
     document.getElementById("currentDay")
         .innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
 }
 setInterval(update, 1000);
 
-// Save Btn >> Local
+// Save button click and set item in local storage
 
 $(document).ready(function () {
 
@@ -21,6 +18,13 @@ $(document).ready(function () {
 
         localStorage.setItem(time, text);
     })
+
+
+    // Function to tell whether hour is in past, present or future
+
+    //If hour is in past, present or future either it should clear and then add 
+    //the correct class (css includes color) based on the block of time and current time
+
 
     function trackTime() {
         var currentTime = moment().hour();
@@ -48,6 +52,8 @@ $(document).ready(function () {
 
     }
 
+    // Store the current value of hour element in local note in Calendar 
+    // based on entry in specific hour
 
     $("#hour8 .description").val(localStorage.getItem("hour8"));
     $("#hour9 .description").val(localStorage.getItem("hour9"));
