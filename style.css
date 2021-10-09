@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 16px;
     line-height: 1;
     /* background-color: yellow; */
@@ -24,6 +24,7 @@ textarea {
 
 .description {
     white-space: pre-wrap;
+    border: 1px solid black;
 }
 
 .time-block {
