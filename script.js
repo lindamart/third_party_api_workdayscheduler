@@ -29,18 +29,18 @@ $(document).ready(function () {
             var blkTime = parseInt($(this).attr("id").split("hour")[1]);
 
             if (blkTime < currentTime) {
-                $(this).deleteClass("future");
-                $(this).deleteClass("present");
+                $(this).removeClass("future");
+                $(this).removeClass("present");
                 $(this).addClass("past");
             }
             else if (blkTime === currentTime) {
-                $(this).deleteClass("past");
-                $(this).deleteClass("future");
+                $(this).removeClass("past");
+                $(this).removeClass("future");
                 $(this).addClass("present");
             }
             else {
-                $(this).deleteClass("present");
-                $(this).deleteClass("past");
+                $(this).removeClass("present");
+                $(this).removeClass("past");
                 $(this).addClass("future")
             }
 
@@ -49,17 +49,17 @@ $(document).ready(function () {
     }
 
 
-    $("#am8 .description").val(localStorage.getItem("am8"));
-    $("#am9 .description").val(localStorage.getItem("am9"));
-    $("#am10 .description").val(localStorage.getItem("am10"));
-    $("#am11 .description").val(localStorage.getItem("am11"));
-    $("#pm12 .description").val(localStorage.getItem("pm12"));
-    $("#pm1 .description").val(localStorage.getItem("pm1"));
-    $("#pm2 .description").val(localStorage.getItem("pm2"));
-    $("#pm3 .description").val(localStorage.getItem("pm3"));
-    $("#pm4 .description").val(localStorage.getItem("pm4"));
-    $("#pm5 .description").val(localStorage.getItem("pm5"));
-    $("#pm6 .description").val(localStorage.getItem("pm6"));
+    $("#hour8 .description").val(localStorage.getItem("hour8"));
+    $("#hour9 .description").val(localStorage.getItem("hour9"));
+    $("#hour10 .description").val(localStorage.getItem("hour10"));
+    $("#hour11 .description").val(localStorage.getItem("hour11"));
+    $("#hour12 .description").val(localStorage.getItem("hour12"));
+    $("#hour1 .description").val(localStorage.getItem("hour1"));
+    $("#hour2 .description").val(localStorage.getItem("hour2"));
+    $("#hour3 .description").val(localStorage.getItem("hour3"));
+    $("#hour4 .description").val(localStorage.getItem("hour4"));
+    $("#hour5 .description").val(localStorage.getItem("hour5"));
+    $("#hour6 .description").val(localStorage.getItem("hour6"));
 
     trackTime();
 })
