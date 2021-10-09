@@ -17,7 +17,7 @@ When I refresh the page the saved events persist
 
 # Screenshot
 
-![](PHOTO.jpg)
+![](scheduleShot.jpg)
 
 # Deployed Link
 
